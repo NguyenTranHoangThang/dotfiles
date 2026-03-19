@@ -1,0 +1,133 @@
+[user]
+	name = Thang Nguyen
+	email = thang@example.com
+
+[core]
+	editor = code
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+
+[pull]
+	rebase = false
+
+[push]
+	default = current
+	followTags = true
+
+[alias]
+	# Status & Info
+	st = status -sb
+	co = checkout
+	cb = checkout -b
+
+	# Add
+	a = add
+	aa = add -A
+	ap = add -p
+
+	# Commit
+	ci = commit
+	cim = commit -m
+	ca = commit --amend
+	cane = commit --amend --no-edit
+
+	# Branch
+	br = branch
+	brd = branch -d
+	brD = branch -D
+	brv = branch -vv
+
+	# Diff
+	d = diff
+	dc = diff --cached
+	ds = diff --staged
+	dl = diff --stat
+
+	# Log
+	l = log --oneline --graph --decorate -15
+	ll = log --oneline --graph -20
+	ls = log --pretty=format:\"%h %s\" --name-only
+
+	# Stash
+	sta = stash
+	stp = stash pop
+	staash = stash --include-untracked
+
+	# Reset
+	r = reset
+	rh = reset --hard
+	rs = reset --soft
+
+	# Rebase
+	rb = rebase
+	rbi = rebase -i
+	rbc = rebase --continue
+	rba = rebase --abort
+
+	# Worktree
+	wt = worktree
+	wtl = worktree list
+	wtc = worktree add
+	wtr = worktree remove
+
+	# Cleanup
+	clean = clean -fd
+	undo = reset --soft HEAD~1
+
+	# Search
+	gr = grep -n
+	grs = grep -n --heading --color=never
+
+	# Review
+	review = log --oneline origin/main..HEAD
+
+[color]
+	ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = blue bold
+	frag = black bold
+	new = green bold
+	old = red bold
+
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+
+[diff]
+	tool = vscode
+	 guitool = vscode
+
+[difftool]
+	prompt = false
+
+[merge]
+	tool = vscode
+	verbosity = 2
+
+[mergetool]
+	prompt = false
+	keepBackup = false
+
+[fetch]
+	prune = true
+	pruneTags = true
+
+[rebase]
+	autosquash = true
+	autostash = true
+
+[init]
+	defaultBranch = main
+
+[help]
+	autocorrect = prompt

@@ -1,0 +1,11 @@
+# ================================
+# EXPORTS - Environment Variables
+# ================================
+# Add your API keys and secrets here
+# DO NOT commit secrets to git!
+
+# Example:
+# export GITHUB_TOKEN="ghp_xxxx"
+# export OPENAI_API_KEY="sk-xxxx"
+
+# Path additions (see path.zsh)
